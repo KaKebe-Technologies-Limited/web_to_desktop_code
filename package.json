@@ -1,0 +1,41 @@
+{
+  "name": "JASO-POS",
+  "version": "1.0.0",
+  "description": "Software built by KaKebe Technologies limited",
+  "main": "main.js",
+
+  "scripts": {
+    "start": "electron .",
+    "build-installer": "electron-builder"
+    
+
+  },
+  "author": "stv ",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "electron": "^15.3.0",
+    "electron-builder": "^22.4.1"
+  },
+  "build": {
+    "appId": "com.kakebe.jaso",
+    "win": {
+      "target": ["nsis"],
+      "icon": "build/src/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "build/src/icon.ico",
+      "uninstallerIcon": "build/src/icon.ico",
+      "uninstallDisplayName": "Remove Jaso-POS",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories":{
+      "buildResources":"resources",
+      "output":"release"
+  }
+  }
+
+
+}
